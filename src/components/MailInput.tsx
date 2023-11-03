@@ -27,7 +27,7 @@ const MailInput = ({ setIsValid, isValid, setEmail, email }: MailInputProps) => 
       <input
         id="email"
         name="email"
-        className={`w-full border h-14 pl-6 rounded-lg bg-[#ff6155]/20 placeholder-[#242742]/50 transition duration-300 ${
+        className={`w-full border h-14 pl-6 rounded-lg focus:border-[#242742] placeholder-[#242742]/50 transition duration-300 ${
           isValid
             ? "border-[#19182B]/25 bg-[#FFF] text-[#242742]"
             : "border-[#FF6155] bg-[#FFE7E6] text-[#FF6155]"

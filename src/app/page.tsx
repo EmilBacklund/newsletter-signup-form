@@ -8,14 +8,15 @@ import SuccessMessage from "@/components/SuccessMessage";
 
 export default function Home() {
   const [submitSuccessful, setSubmitSuccessful] = useState<boolean>(false);
+  const [email, setEmail] = useState('');
 
   return (
     <main className="bg-[#36384D] h-screen text-[#242742] flex justify-center items-center relative">
       <div
         className={`bg-white max-w-[928px] h-fit rounded-lg sm:rounded-[36px] overflow-hidden flex flex-col sm:gap-8 lg:gap-16 sm:flex-row-reverse w-full sm:mx-10 lg:py-6 lg:pr-6 sm:pl-8 lg:pl-16 lg:items-center transition duration-500 ${
           !submitSuccessful
-            ? "opacity-100 pointer-events-auto z-0"
-            : "opacity-0 pointer-events-none -z-10"
+            ? "opacity-100 pointer-events-auto z-0 max-h-[1000px]"
+            : "opacity-0 pointer-events-none -z-10 max-h-0"
         }`}
       >
         <header className="min-h-[284px] flex-1 relative rounded-b-2xl sm:rounded-b-none sm:rounded-l-2xl overflow-hidden lg:rounded-tl-2xl lg:min-h-[593px]">
@@ -42,10 +43,10 @@ export default function Home() {
               <CheckListItem text="And much more!" />
             </div>
           </div>
-          <Form setSubmitSuccessful={setSubmitSuccessful} />
+          <Form setSubmitSuccessful={setSubmitSuccessful} email={email} setEmail={setEmail} />
         </div>
       </div>
-      <SuccessMessage />
+      <SuccessMessage submitSuccessful={submitSuccessful} setSubmitSuccessful={setSubmitSuccessful} email={email} setEmail={setEmail} />
     </main>
   );
 }
