@@ -35,7 +35,7 @@ export default function Home() {
         </header>
         <div className="py-10 px-6 sm:px-0 sm:max-w-[376px]">
           <div className="flex flex-col gap-6 pb-10">
-            <h1 className="text-[40px] lg:text-[56px] leading-10 font-bold">Stay updated!</h1>
+            <h1 className="text-[40px] lg:text-[56px] lg:leading-[56px] leading-10 font-bold">Stay updated!</h1>
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
             <div className="flex flex-col gap-2.5">
               <CheckListItem text="Product discovery and building what matters" />
